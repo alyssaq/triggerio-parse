@@ -1,4 +1,4 @@
 triggerio-parse
 ===============
 
-Triggerio with Parse and mustache base
+Triggerio with Parse, mustache and bootstrap 3 base
