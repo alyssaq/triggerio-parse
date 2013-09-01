@@ -1,0 +1,53 @@
+{
+	"config_version": "4",
+	"name": "dilivr",
+	"author": "alyssa@dilivr.it",
+	"version": "0.1",
+	"platform_version": "v2.0.0",
+	"description": "An empty app created by default",
+	"core": {
+		"general": {
+			"logging": {
+				"level": "INFO"
+			},
+			"reload": true
+		},
+		"android": {
+			"minimum_version": "5",
+			"package_name": "com.alyssa.dilivr"
+		},
+		"chrome": {},
+		"firefox": {},
+		"ie": {},
+		"ios": {
+			"minimum_version": "4.3",
+			"device_family": "any"
+		},
+		"osx": {},
+		"safari": {}
+	},
+	"modules": {
+		"parse": {
+			"version": "2.0",
+			"config": {
+				"clientKey": "L4eTr0WIi8ALpWRQ5nX26I3C9bxW3eUth5FAgQ6B",
+				"applicationId": "wmPoE4R7d53hyURxAF70Xt2EFj0IJGu1gv2pixtt"
+			}
+		},
+		"request": {
+			"version": "2.1",
+			"config": {
+				"permissions": []
+			}
+		},
+		"file": {
+			"version": "2.0",
+			"config": {}
+		},
+		"camera": {
+			"version": "2.0",
+			"config": {}
+		}
+	},
+	"homepage": "http://www.dilivr.it"
+}

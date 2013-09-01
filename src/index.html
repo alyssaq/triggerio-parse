@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="triggerio-parse">
+    <meta name="author" content="Alyssa Quek">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+		<link rel="stylesheet" href="css/parse-demo.css">
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/mustache.js"></script>
+		<script src="js/main.js"></script>
+
+		<script src="https://trigger.io/catalyst/target/target-script-min.js#4DBBC75C-B44E-4B50-BAFA-F49244502E51"></script>
+		<script type="text/javascript" src="js/weather.js"></script>
+		<style type="text/css">
+			body {
+			  padding-top: 50px;
+			  padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		 <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Triggerio app</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <button id="upload-photo">Upload photo</button>
+				<div id="photo-container"></div>
+				<p class="lead">Congratulations on creating a new Trigger.io App.</p>
+      </div>
+    </div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+					<script type="x-mustache-template" id="forecast_information_tmpl">
+				    <h1>Forecast for {{display_location.full}}</h1>
+				    <p>{{observation_time}}</p>
+					</script>
+					<script type="x-mustache-template" id="current_conditions_tmpl">
+				    <table>
+				        <tr>
+				            <td><img src="{{icon_url}}" /></td>
+				            <td>
+				                <div>{{weather}}</div>
+				                <div>{{temp_f}}&deg;F</div>
+				                <div>Humidity: {{relative_humidity}}</div>
+				                <div>Wind: {{wind_string}}</div>
+				            </td>
+				        </tr>
+				    </table>
+				</script>
+
+				<script type="x-mustache-template" id="forecast_conditions_tmpl">
+					{{#forecastday}}
+					<td>
+						<h2>{{date.weekday_short}}</h2>
+						<img src="{{icon_url}}">
+						<div>{{conditions}}</div>
+						<div>Low: {{low.fahrenheit}}&deg;F</div>
+						<div>High: {{high.fahrenheit}}&deg;F</div>
+					</td>
+					{{/forecastday}}
+				</script>
+				
+				<header id="forecast_information"></header>
+				<section id="current_conditions"></section>
+				<section id="forecast_conditions">
+					<table>
+						<tr>
+						</tr>
+					</table>
+				</section>
+
+			</div> <!--/col-md-12-->
+		</div> <!--/row-->
+	</body>
+</html>

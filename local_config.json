@@ -1,0 +1,27 @@
+{
+	"general": {},
+	"ios": {
+		"profiles": {
+			"DEFAULT": {}
+		},
+		"simulatorsdk": "6.1",
+		"simulatorfamily": "iphone",
+		"device": "simulator"
+	},
+	"android": {
+		"profiles": {
+			"DEFAULT": {}
+		},
+		"device": "SH1AJV805034",
+		"sdk": "/Applications/",
+		"purge": true
+	},
+	"web": {
+		"profiles": {
+			"DEFAULT": {
+				"heroku_app_name": "dilivr"
+			}
+		},
+		"node_path": "/usr/local/bin/"
+	}
+}
