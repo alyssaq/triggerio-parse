@@ -34,17 +34,21 @@
 				"applicationId": "wmPoE4R7d53hyURxAF70Xt2EFj0IJGu1gv2pixtt"
 			}
 		},
-		"request": {
-			"version": "2.1",
-			"config": {
-				"permissions": []
-			}
-		},
 		"file": {
 			"version": "2.0",
 			"config": {}
 		},
 		"camera": {
+			"version": "2.0",
+			"config": {}
+		},
+		"request": {
+			"version": "2.2",
+			"config": {
+				"permissions": []
+			}
+		},
+		"sms": {
 			"version": "2.0",
 			"config": {}
 		}

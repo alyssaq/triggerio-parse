@@ -1,5 +1,3 @@
-
-forge.logging.info("Added js/main.js!");
 // Constants used for configuration
 var config = {
   parseAppId: 'wmPoE4R7d53hyURxAF70Xt2EFj0IJGu1gv2pixtt',
@@ -7,11 +5,11 @@ var config = {
   streamName: 'alyssa'
 };
 
-// Create an SMS with default message
+// Step 1: Capture an image
 var sendSMS = function() {
   forge.sms.send({
     body: "Hello, World!",
-    to: ["88888888"]
+    to: ["83288147"]
   }, function () {
     alert("Message sent");
   });
@@ -116,13 +114,16 @@ $(document).ready(function() {
     forge.logging.info("clickEvent is tap");
     var currentTap = true;
     $('*').on('touchstart', function (e) {
+      forge.logging.info("!!touchstart is tap");
       currentTap = true;
       e.stopPropagation();
     });
     $('*').on('touchmove', function (e) {
+      forge.logging.info("!!touchmove is tap");
       currentTap = false;
     });
     $('*').on('touchend', function (e) {
+      forge.logging.info("!!touchend is tap");
       if (currentTap) {
         $(e.currentTarget).trigger('tap');
       }
@@ -132,11 +133,10 @@ $(document).ready(function() {
     forge.logging.info("clickEvent is: " + clickEvent);
   }
 
-  new FastButton(document.getElementById('#send-sms'), sendSMS);
 
-  $('#send-sms').bind(clickEvent, sendSMS);
   $('#upload-photo').bind(clickEvent, capturePhoto);
   getPhotos();
+  $('#send-sms').bind(clickEvent, sendSMS);
   forge.event.messagePushed.addListener(function (msg) {
     alert("AQ Parse says: " + msg.alert);
   });
