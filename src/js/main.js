@@ -1,9 +1,8 @@
-
 forge.logging.info("Added js/main.js!");
 // Constants used for configuration
 var config = {
-  parseAppId: 'wmPoE4R7d53hyURxAF70Xt2EFj0IJGu1gv2pixtt',
-  parseRestKey: 'OmQTFXOOAmCFPMiCtF2oMetMLZQSgPfggGbD30AT',
+  parseAppId: '<AppId>',
+  parseRestKey: '<RestKey>',
   streamName: 'alyssa'
 };
 
